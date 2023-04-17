@@ -2,9 +2,23 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import PokemonList from "./components/PokemonList"
 import { Fragment } from 'react';
 import { CORE_POKEMON } from './fragment';
+import { Box } from '@mui/material';
 export default function Home({ pokemons }) {
   return (
-    <PokemonList pokemons={pokemons}/>
+    <Box
+    sx={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent:'space-between',
+      mx:4,my:4
+    }}
+  >
+    {
+        pokemons.map((pokemon)=> 
+        <PokemonList pokemon={pokemon}/>
+        )
+    }
+  </Box>
   )
 }
 
