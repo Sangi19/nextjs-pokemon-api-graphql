@@ -276,3 +276,15 @@
     transform: rotate(0deg);
   }
 }
+.grass{
+  color: green;
+}
+.water{
+    color: cyan;
+  }
+  .fire{
+    color: orangered;
+  }
+  .poison{
+    color: violet;
+  }

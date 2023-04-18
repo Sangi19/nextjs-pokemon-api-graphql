@@ -2,9 +2,18 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import PokemonList from "./components/PokemonList"
 import { Fragment } from 'react';
 import { CORE_POKEMON } from './fragment';
-import { Box } from '@mui/material';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+
 export default function Home({ pokemons }) {
   return (
+    <Paper>
+        <Box sx={{display:"flex",justifyContent:"space-between"}}>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
+    alt="logo" sx={{mt:1}} height={75}width={300}/>
+        <img src="https://thumbs.dreamstime.com/b/pokemon-ball-poke-isolated-white-background-d-illustration-74683385.jpg"alt="smallLogo" sx={{mt:1}}height={90} width={90}/>   
+          
+          </Box>
     <Box
     sx={{
       display: 'flex',
@@ -15,10 +24,11 @@ export default function Home({ pokemons }) {
   >
     {
         pokemons.map((pokemon)=> 
-        <PokemonList pokemon={pokemon}/>
+        <PokemonList key={pokemon.id} pokemon={pokemon}/>
         )
     }
   </Box>
+  </Paper>
   )
 }
 
@@ -38,6 +48,14 @@ export async function getStaticProps() {
           id
           number
           name
+          weight{
+            minimum
+            maximum
+          }
+          height{
+            minimum
+            maximum
+          }
           classification
           types
           resistant
