@@ -96,9 +96,13 @@ const handleCloseEV = () => setOpenEV(false);
   return (
     <div>
       <Box sx={{mb:2}} key={pokemon?.id}>
-        <Card sx={{  maxWidth: 345}} onClick={handleOpen} >
+        <Card sx={{  maxWidth: 345,
+        '&:hover':{
+          boxShadow: 20,
+        }
+        }} onClick={handleOpen} >
           <CardMedia
-            sx={{ mx:10,my:2,height: 175,width: 175, }}
+            sx={{ mx:10,my:2,height: 175,width: 175 }}
             image={pokemon?.image}
             title={pokemon?.name}
             />
