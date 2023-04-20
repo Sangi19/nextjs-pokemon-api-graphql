@@ -8,11 +8,11 @@ return (
       display: 'flex',
       flexWrap: 'wrap',
       }}>
-        {pokemonEV.evolutions===null?
+        {pokemonEV?.evolutions===null?
         <Box sx={{ml:27}}>
           <img src="https://cdn-icons-png.flaticon.com/512/2748/2748558.png"alt='notFound' height={300}/>
         </Box> :
-        pokemonEV.evolutions.map((ev)=>
+        pokemonEV?.evolutions.map((ev)=>
           <Box sx={{ mx:4,my:4}}>
             <Card
               sx={{

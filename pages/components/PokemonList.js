@@ -95,22 +95,22 @@ const handleCloseEV = () => setOpenEV(false);
 
   return (
     <div>
-      <Box sx={{mb:2}} key={pokemon.id}>
+      <Box sx={{mb:2}} key={pokemon?.id}>
         <Card sx={{  maxWidth: 345}} onClick={handleOpen} >
           <CardMedia
             sx={{ mx:10,my:2,height: 175,width: 175, }}
-            image={pokemon.image}
-            title={pokemon.name}
+            image={pokemon?.image}
+            title={pokemon?.name}
             />
           <CardContent>
             <Typography variant="h5" color="text.secondary">
-              <bold>#{pokemon.number}</bold>
+              <bold>#{pokemon?.number}</bold>
             </Typography>
             <Typography variant="h4">
-              {pokemon.name}
+              {pokemon?.name}
             </Typography>
             <Typography variant="body2" color='blue'>                        
-              {pokemon.types.map((item)=> 
+              {pokemon?.types.map((item)=> 
             <Button variant='contained'  sx={{mr:1}}size="small" color="inherit" >{item}</Button>) }
             </Typography>
           </CardContent>
@@ -124,12 +124,12 @@ const handleCloseEV = () => setOpenEV(false);
           <Box sx={{display:'flex',justifyContent:"space-around"}}>
             <Box> 
               <Typography  variant="h3" component="h2" sx={{mb:5}}>
-                {pokemon.name}
+                {pokemon?.name}
               </Typography>
               <CardMedia
                 sx={{ mx:1,my:1,height: 275,width: 275, }}
-                image={pokemon.image}
-                title={pokemon.name}
+                image={pokemon?.image}
+                title={pokemon?.name}
                 />
             </Box>
             <Box>
@@ -137,37 +137,37 @@ const handleCloseEV = () => setOpenEV(false);
                 Height 
               </Typography>
               <Typography   variant="subtitle2"  sx={{ mt: 1 }}> 
-                {pokemon.height.minimum} -  {pokemon.height.maximum}
+                {pokemon?.height.minimum} -  {pokemon?.height.maximum}
               </Typography>
               <Typography variant="h6"  sx={{ mt: 1 }}>
                 Weight  
               </Typography>
               <Typography variant="subtitle2"  sx={{ mt: 1 }}>
-                {pokemon.weight.minimum} - {pokemon.weight.maximum}
+                {pokemon?.weight.minimum} - {pokemon?.weight.maximum}
               </Typography>
               <Typography variant="h6"  sx={{ mt: 1 }}>
                 Classification 
               </Typography>
               <Typography variant="subtitle2"  sx={{ mt: 1 }}> 
-                {pokemon.classification}
+                {pokemon?.classification}
               </Typography>
               <Typography variant="h6"  sx={{ mt: 1 }}>
                 Type  
               </Typography>
               <Typography  variant="subtitle2" sx={{ mt: 1 }}> 
-                {pokemon.types.map(item=>item+" ")}
+                {pokemon?.types.map(item=>item+" ")}
               </Typography>
               <Typography  variant="h6" sx={{ mt: 1 }}>
                 Weakness 
                </Typography>
               <Typography variant="subtitle2"  sx={{ mt: 1 }}> 
-                {pokemon.weaknesses.map(item=>item+" ")}
+                {pokemon?.weaknesses.map(item=>item+" ")}
               </Typography>
               <Typography variant="h6"  sx={{ mt: 1 }}>
                 Resistance 
               </Typography>
               <Typography variant="subtitle2"  sx={{ mt: 1 }}> 
-                {pokemon.resistant.map(item=>item+" ")}
+                {pokemon?.resistant.map(item=>item+" ")}
               </Typography>
             </Box>
           </Box>
