@@ -1,32 +1,40 @@
-import { Box, Modal } from '@mui/material'
 import React from 'react'
+import { Card, CardMedia, Typography,Box} from '@mui/material';
 
-export default function Pokemon() {
-  return (
-    <div>
-        <Box>
+export default function Pokemon({pokemonEV}) {
 
-        </Box>
-         <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-            >
-            <Box sx={style}>
-                <CardMedia
-                    sx={{ mx:10,my:2,height: 200,width: 200, }}
-                    image={launch.image}
-                    title={launch.name}
-                    />
-                <Typography id="modal-modal-title" variant="h6" component="h2">
-                    {launch.name}
-                </Typography>
-                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                </Typography>
+return (
+    <Box sx={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      }}>
+        {pokemonEV.evolutions===null?
+        <Box sx={{ml:27}}>
+          <img src="https://cdn-icons-png.flaticon.com/512/2748/2748558.png"alt='notFound' height={300}/>
+        </Box> :
+        pokemonEV.evolutions.map((ev)=>
+          <Box sx={{ mx:4,my:4}}>
+            <Card
+              sx={{
+                maxWidth: 300,borderRadius:50
+              }}                
+              >
+              <CardMedia
+                sx={{ mx:10,my:2,height: 175,width: 175, }}
+                image={ev.image}
+                title={ev.name}
+                />
+            </Card>
+            <Box sx={{ml:7}}>
+              <Typography variant="h4">
+                {ev.name}
+              </Typography>
+              <Typography variant="h5" color="text.secondary">
+                <bold>#{ev.number}</bold>
+              </Typography>
             </Box>
-            </Modal>
-    </div>
+        </Box>
+        )}
+    </Box>
   )
 }
