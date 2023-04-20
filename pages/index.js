@@ -34,6 +34,7 @@ export default function Home({ pokemons }) {
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="logo" sx={{mt:1}} height={75}width={300}/>
           <img src="https://thumbs.dreamstime.com/b/pokemon-ball-poke-isolated-white-background-d-illustration-74683385.jpg"alt="smallLogo" sx={{mt:1}}height={90} width={90}/>   
         </Box>
+        <Pagination color="primary"  size="large" variant="outlined"  sx={{ml:92.5}} count={8} page={page} onChange={handleChange}/>
         <Box
           sx={{
             display: 'flex',
@@ -49,7 +50,6 @@ export default function Home({ pokemons }) {
               )
             }
         </Box>
-        <Pagination color="primary"  size="large" count={8} page={page} onChange={handleChange}/>
     </Paper>
   )
 }
