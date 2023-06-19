@@ -31,7 +31,9 @@
 - Open http://localhost:3000 to view it in your browser.
 
 ## screenshots:
-
+![home page](https://github.com/Sangi19/nextjs-pokemon-api-graphql/blob/main/images/home.PNG)
+![select pokemon](https://github.com/Sangi19/nextjs-pokemon-api-graphql/blob/main/images/home1.PNG)
+![pokemon evolution](https://github.com/Sangi19/nextjs-pokemon-api-graphql/blob/main/images/home2.PNG)
 
 ## Live Version:
 - https://nextjs-pokemon-api-graphql.vercel.app/ 
