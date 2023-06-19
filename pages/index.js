@@ -47,8 +47,7 @@ export default function Home({ pokemons }) {
               <div key={pokemon.id}>
                 <PokemonList key={pokemon.id} pokemon={pokemon}/>
               </div> 
-              )
-            }
+              )}
         </Box>
     </Paper>
   )
