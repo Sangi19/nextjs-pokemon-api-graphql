@@ -39,7 +39,7 @@ Pokemon evolution:<br>
 ![pokemon evolution](https://github.com/Sangi19/nextjs-pokemon-api-graphql/blob/main/images/home2.PNG)
 
 ## Live Version:
-- https://nextjs-pokemon-api-graphql.vercel.app/ 
+- [https://nextjs-pokemon-api-graphql.vercel.app/](https://nextjs-pokemon-api-graphql-t2n6.vercel.app/) 
 
 ## Built by
 
